@@ -51,7 +51,10 @@ def char_to_num(char):
     :param char: string, the letter to be converted
     :return: int, the position
     '''
-    return ord(char) - 97
+    if ALPHABET_STARTS_AT_0:
+        return ord(char) - 97
+    else:
+        return ord(char) - 96
     
 def num_to_char(n):
     '''
@@ -59,7 +62,10 @@ def num_to_char(n):
     :param n: int, the postion to be converted
     :return: str, the letter
     '''
-    return chr(n + 97)
+    if ALPHABET_STARTS_AT_0:
+        return chr(n + 97)
+    else:
+        return chr(n + 96)
     
 def encrypt(string, multiplier, shift):
     '''
@@ -113,6 +119,11 @@ def decrypt(string, multiplier, shift):
     plaintext = encrypt(plaintext, INVERSES[multiplier], 0)
     return plaintext
 
+#dcode.fr says a=0, b=1 etc. but some other sites say a=1, b=2 etc.
+#encrpytion and decryption will still work regardess 
+#but key based decryption and the accuracy of clauated keys from brute force rely upon this being the same as what was used for encryption
+
+ALPHABET_STARTS_AT_0 = False
 INVERSES = {}
 class NoSolution(Exception):
     'Raised when no inverse exists'
