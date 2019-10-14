@@ -188,9 +188,7 @@ elif MODE == "2" or MODE == "decrypt":
             while True:
                 for el in plaintexts:
                     if CRIB in el:
-                        #TODO caluclate and print multiplier
-                        #calculates and prints the shift
-                        print((char_to_num(text[0]) - 96 - char_to_num(el[0]) - 96) % 26)
+                        #TODO caluclate and print multiplier and shift
                         #prints the plaintext with the option for them to press enter when they want to see the next plaintext
                         input(el)
         else:
@@ -211,9 +209,7 @@ elif MODE == "2" or MODE == "decrypt":
                     TRIGRAMS[0] == "ing" or TRIGRAMS[1] == "ing" or
                     letter_frequencies[0] == "e" or letter_frequencies[1] == "e" or
                     letter_frequencies[0] == "t" or letter_frequencies[1] == "t"):
-                        #TODO caluclate and print multiplier
-                        #calculates and prints the shift
-                        print((char_to_num(text[0]) - 96 - char_to_num(el[0]) - 96) % 26)
+                        #TODO caluclate and print multiplier and shift
                         #prints the plaintext with the option for them to press enter when they want to see the next plaintext
                         input(el)
                     
