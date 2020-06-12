@@ -1,6 +1,6 @@
 # affine-cipher
 Some python for encrypting and decrypting with some forms of affine cipher  
-[Live demo](https://repl.it/github/https://github.com/qwertpi/affine-cipher/)  
+[Live demo](https://repl.it/github/qwertpi/affine-cipher/)  
 Feedback and pull requests are very welcome  
 
 ## LIMITATIONS
